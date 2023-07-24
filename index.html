@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -11,12 +11,48 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet"
+        href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+ 
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <div class = "main">
+            <div class = "title">JavaScript Music Player</div>
+
+            <div class="details">
+                <div class="song_name"></div>
+                <div class="album_cover"></div>
+                <div class="artist"></div>
+            </div>
+
+            <div class = "button_container">
+                <div class="prevButton">
+                    <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="play_button">
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next_button">
+                    <i class="fa fa-step-forward fa-2x"></i>
+
+                </div>
+            </div>
+            <div class="slide_container">
+                <div class="curr_time"></div>
+                <input type="range" min="1" max="100"
+                value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total_time"></div>
+            </div>
+
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="1" max="100"
+                  value="99" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+              </div>
+        </div>
         
-        <script src="" async defer></script>
+        <script src="script.js" async defer></script>
     </body>
 </html>
